@@ -1,7 +1,7 @@
 # Importando a biblioteca ElementTree para manipulação do xml
 import xml.etree.ElementTree as ET
 
-tree = ET.parse('cnpq.xml')
+tree = ET.parse('entrada.xml')
 root = tree.getroot()
 
 atributos_root = root.attrib
@@ -60,5 +60,5 @@ field5.text = valor_idioma
 
 #escrevendo o arquivo
 dados = ET.tostring(add)
-file = open("saida_test_fapesp.xml", "wb")
+file = open("saida.xml", "wb")
 file.write(dados)
